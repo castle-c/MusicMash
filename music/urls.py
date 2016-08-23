@@ -7,6 +7,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     #when music page loads go to views and run this function
 
-    #/music/99
+    #/music/99/
     url(r'^(?P<album_id>[0-9]+)/$', views.detail, name='detail'),
 ]
