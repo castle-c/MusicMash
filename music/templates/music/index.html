@@ -1,11 +1,18 @@
-{% if all_albums %}
-  <h3> All Albums </h3>
-  <ul>
-    {% for album in all_albums %}
-    <li><a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a>
-    </li>
-    {% endfor %}
-  </ul>
-{% else %}
-  <h3>no albums</h3>
-{% endif %}
+{% extends 'music/base.html' %}
+<!-- connects index.html to base.html -->
+
+{% block body %}
+<!-- block body and end block put code inide blocks into the body of base.html -->
+  {% if all_albums %}
+    <h3> All Albums </h3>
+    <ul>
+      {% for album in all_albums %}
+      <li><a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <h3>no albums</h3>
+  {% endif %}
+
+{% endblock %}
