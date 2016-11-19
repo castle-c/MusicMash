@@ -1,5 +1,6 @@
 body{
   background: white url("images/ignasi.png");
+  font-family: 'Shadows Into Light', cursive;
 
 }
 
@@ -7,6 +8,7 @@ body{
   border-radius: 0;
 }
 
-.navbar-brand{
+/*.navbar-brand{
   font-family: 'Shadows Into Light', cursive;
 }
+*/

@@ -1,0 +1,25 @@
+{% extends 'music/base.html' %}
+<!-- {% block title %}Album Details{% endblock %} -->
+<!-- blocks can be used to override text in main html -->
+{% block body %}
+  <img src="{{ album.album_logo}}">
+  <h1>{{album.album_title}}</h1>
+  <h2>{{album.artist}}</h2>
+
+
+  {% for song in album.song_set.all %}
+      {{ song.song_title }}
+      {% if song.is_favorite %}
+        <img src="https://confluence.atlassian.com/s/en_GB/6220/de9b463eb65c5ca13c0266eed77e2bf49f4c6fe8.27/_/images/icons/emoticons/star_yellow.png"/>
+      {% endif %}
+      <br>
+ <!-- lesson 23 -->
+ <!--    forloop.counter auto increments song id -->
+
+  {% endfor %}
+{% endblock %}
+<!-- <ul>
+  {%for song in album.song_set.all %}
+    <li>{{ song.song_title }} - {{ song.file_type }}</li>
+  {% endfor %}
+</ul> -->
